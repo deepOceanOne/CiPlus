@@ -7,8 +7,13 @@ import requests
 
 NER_URL = 'http://api.bosonnlp.com/ner/analysis'
 
+# 简书搜索URL
+# JIAN_SEARCH_URL = "https://www.jianshu.com/search?q=111&page=1&type=note"
+
 api = url2io.API(os.environ['URL2IO_API'])
-ret = api.article(url='https://www.jianshu.com/p/48e283cbf550', fields=['text',])
+# ret = api.article(url='https://www.jianshu.com/p/48e283cbf550', fields=['text',])
+ret = api.article(url='http://www.mafengwo.cn/i/9256925.html', fields=['text',])
+
 content = ret['text']
 
 
